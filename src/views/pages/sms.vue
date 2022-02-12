@@ -69,7 +69,8 @@
 </template>
 <script>
 export default {
-  name:'sms'
+  name:'sms',
+
 }
 </script>
 <style>
