@@ -7,12 +7,21 @@
         <div id="div_CRAI">
           <div class="logo"><img style="width:200px" src="../img/logo-pb-en.svg" alt="Welcome to ePostbank">
             <h3>Additional Authentication</h3>
-          </div>
 
+          </div>
+          <div class="mobileTokenContainer"><ul class="enrollmentStepsContainer"><li>
+            Ще получите следните кодове за активиране:
+
+            <ul class="codePartsContainer"><li>
+              Код 1 ще бъде изпратен на посочения от Вас мобилен телефонен номер в e-Postbank чрез Viber/SMS
+            </li><li>
+              Код 2 ще бъде изпратен на имейл адреса, предоставен от Вас в e-Postbank
+            </li></ul></li></ul></div>
           <table class="filterBG">
+
             <tbody>
             <tr><td colspan="4">
-              Моля, потвърдете с кода получен чрез Viber/SMS или автоматично обаждане, валиден до 11.02.2022 22:53:11
+              Моля, потвърдете с кода получен чрез Viber/SMS или автоматично обаждане.
             </td></tr>
             <tr>
               <td colspan="2">
@@ -40,7 +49,7 @@
           <table class="filterBG">
             <tbody>
             <tr><td colspan="4">
-              Моля, потвърдете с кода получен чрез електронна поща  или автоматично обаждане, валиден до 11.02.2022 22:53:11
+              Моля, потвърдете с кода, получен по имейл.
             </td></tr>
             <tr>
               <td colspan="2">
@@ -59,7 +68,7 @@
               </td>
             </tr>
             </tbody>
-            <a href="#" id="Logout" style="float:right;" class="blue" onclick="DoLogout()"><span>Logout</span></a>
+            <p class="buttons ePortalDivIndent"><input type="submit" tabindex="0" style="width:100px;" value="Confirm" class="btn" v-on:click="red"></p>
           </table>
 
         </div>

@@ -8000,3 +8000,13 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     text-align: center;
     margin-bottom: 10px;
 }
+.btn{
+    padding: 3px 4px;
+    width: 70px;
+    font-size: 13px;
+    font-weight: bold;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #777;
+}
