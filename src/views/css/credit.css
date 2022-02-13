@@ -1,104 +1,762 @@
-.card-container {
-    margin: 30px auto 50px auto;
+@font-face {
+    font-family: Circular;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Light.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
-
-.card-form {
-    max-width: 570px;
-    margin: auto;
+@font-face {
+    font-family: Circular-hbr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Light.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Book.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-hbr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Book.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Medium.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-hbr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Medium.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Bold.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-hbr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Bold.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Black.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-hbr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Black.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Hebrew-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-arabic;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Arabic-Light.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Arabic-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-arabic;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Arabic-Medium.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Arabic-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-arabic;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Arabic-Bold.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Arabic-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-cyr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Light.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-cyr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Medium.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-cyr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Book.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-cyr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Black.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Circular-cyr;
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Bold.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Cyrillic-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IosFix';
+    src: local('Helvetica Neue');
+    unicode-range: U+20BD;
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+    margin: 0;
+}
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+    display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+    background-color: transparent;
+}
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+    font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+    border-style: none;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+    vertical-align: baseline;
+}
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+    overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type='checkbox'],
+[type='radio'] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type='search'] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+    display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+    display: list-item;
+}
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+    display: none;
+}
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+    display: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+    font-family: Circular, Helvetica, Arial, sans-serif, IosFix;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+input,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.row {
+    display: flex;
+    direction: ltr;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.row > div {
     width: 100%;
-__inner {
-     background: #fff;
-     box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-     border-radius: 10px;
-     padding: 20px;
- }
-__row{
-     display: flex;
-     align-items: flex-start;
- }
-
-&__col {
-     flex: auto;
-     margin-right: 15px;
-
-&:last-child {
-     margin-right: 0;
- }
-
-&.-cvv {
-     max-width: 150px;
- }
 }
+.pci-body {
+    /*
+      ---------------------------------------------------
+        PCI form styles for tablet and up.
+          -----------------------------
+        Since PCI is a separate window, media queries
+        based on (parent) window size won't work.
 
-&__group {
-     display: flex;
-     align-items: flex-start;
-     flex-wrap: wrap;
-
-.card-input__input {
+        To fix that we add this very specific mq:
+        When the frame's window width exceeds the maximum
+        xs width of the panel (minus the padding), we know
+        it's tablet and up.
+      ---------------------------------------------------
+    */
+}
+.pci-body .input-form-group {
+    position: relative;
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    display: flex;
     flex: 1;
-    margin-right: 15px;
-
-&:last-child {
-     margin-right: 0;
- }
+    flex-direction: column;
+    flex-basis: auto;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
+.pci-body .input-form-group label {
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #7f7f7f;
+    position: absolute;
+    max-width: calc(100% - (12px * 2));
+    top: -11px;
+    left: 12px;
+    background: #fff;
+    padding: 0 6px;
+    pointer-events: none;
+    z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease-in-out, color 0s, background 0s;
+    -moz-transition: left 0.2s ease-in-out, top 0.2s ease-in-out, font-size 0.2s ease-in-out, color 0s, background 0s;
 }
-
-&__button {
-     width: 100%;
-     height: 55px;
-     background: #38a294;
-     border: none;
-     border-radius: 5px;
-     font-size: 22px;
-     font-weight: 500;
-     box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
-     color: #fff;
-     margin-top: 20px;
-     cursor: pointer;
-
-&:hover {
-     background: darken(#38a294, 5%);
- }
+.pci-body .input-form-group input:not(:-webkit-autofill):placeholder-shown:not(:focus) ~ label {
+    left: calc(16px - 6px);
+    top: 16px;
+    color: #535353;
+    font-size: 16px;
 }
+.pci-body .input-form-group input:placeholder-shown:not(:focus) ~ label {
+    left: calc(16px - 6px);
+    top: 16px;
+    color: #535353;
+    font-size: 16px;
 }
-
-.card-input {
-    margin-bottom: 20px;
-&__label {
-     margin-bottom: 5px;
-     color: #1a3b5d;
-     width: 100%;
-     display: block;
-     text-align: left;
- }
-&__input {
-     width: 100%;
-     height: 50px;
-     border-radius: 5px;
-     box-shadow: none;
-     border: 1px solid #ced6e0;
-     transition: all 0.3s ease-in-out;
-     font-size: 18px;
-     padding: 5px 15px;
-     background: none;
-     color: #1a3b5d;
-
-&:hover,
-&:focus {
-     border-color: #38a294;
- }
-
-&:focus {
-     box-shadow: 0px 10px 20px -13px rgba(32, 56, 117, 0.35);
- }
-&.-select {
-     -webkit-appearance: none;
-     background-image: url("/img/select.png");
-     background-size: 12px;
-     background-position: 90% center;
-     background-repeat: no-repeat;
-     padding-right: 30px;
- }
+.pci-body .input-form-group input:-webkit-autofill ~ label {
+    background: linear-gradient(180deg, #fff calc(50% + 2px), rgba(255, 255, 255, 0) calc(50% + 2px));
+}
+.pci-body .input-form-group input:-webkit-autofill:focus ~ label {
+    background: linear-gradient(180deg, #fff calc(50% + 3px), rgba(255, 255, 255, 0) calc(50% + 3px));
+}
+.pci-body .input-form-group input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 16px;
+    display: block;
+    height: 56px;
+    max-height: 56px;
+    width: 100%;
+    line-height: 1.5;
+    color: #181818;
+    background-color: #fff;
+    border: 1px solid #7f7f7f;
+    border-radius: 4px;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    margin-top: auto;
+    outline: 0;
+    background-image: none;
+}
+.pci-body .input-form-group input:hover {
+    border: 1px solid #181818;
+}
+.pci-body .input-form-group input:focus {
+    outline: 0;
+    border-color: #181818;
+    border-width: 2px;
+    padding-left: calc(16px - 1px);
+}
+.pci-body .input-form-group input.invalid-input {
+    border: 1px solid #cd1a2b;
+    background-color: #fdf2f4;
+}
+.pci-body .input-form-group input.invalid-input:focus {
+    border: 2px solid #cd1a2b;
+}
+.pci-body .input-form-group input:hover ~ label {
+    color: #181818;
+}
+.pci-body .input-form-group input:focus ~ label {
+    color: #181818;
+}
+.pci-body .input-form-group input::placeholder {
+    opacity: 0;
+    font-weight: 400;
+}
+.pci-body .input-form-group input:-ms-input-placeholder {
+    opacity: 1;
+    font-weight: 400;
+}
+.pci-body .input-form-group input:focus::placeholder {
+    opacity: 1;
+    color: #7f7f7f;
+}
+.pci-body .input-form-group input.invalid-input:focus,
+.pci-body .input-form-group input.invalid-input:focus:not(:placeholder-shown) {
+    background: #fff;
+}
+.pci-body .input-form-group input.invalid-input:focus ~ label,
+.pci-body .input-form-group input.invalid-input:focus:not(:placeholder-shown) ~ label {
+    color: #cd1a2b;
+    background: #fff;
+}
+.pci-body .input-form-group input.invalid-input:not(:focus) {
+    background: #fdf2f4;
+}
+.pci-body .input-form-group input.invalid-input:not(:focus) ~ label {
+    background: #fdf2f4;
+}
+.pci-body .input-form-group input.invalid-input:not(:placeholder-shown) ~ label {
+    color: #cd1a2b;
+    background: linear-gradient(0deg, #fdf2f4 calc(50% + 1px), rgba(255, 255, 255, 0) 50%);
+}
+.pci-body .input-form-group .field-error {
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    margin: 8px 0 0;
+    color: #cd1a2b;
+}
+.pci-body .input-form-group .field-error + .field-error {
+    margin-top: -2px;
+}
+.pci-body .input-form-group .field-error {
+    display: none;
+}
+.pci-body .dropdown-form-group {
+    position: relative;
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-basis: auto;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-top: 32px;
+}
+.pci-body .dropdown-form-group label {
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-weight: bold;
+    line-height: 20px;
+    color: #181818;
+    margin-bottom: 13px;
+    display: block;
+    max-width: 100%;
+}
+.pci-body .dropdown-form-group select {
+    font-size: 16px;
+    display: block;
+    height: 56px;
+    max-height: 56px;
+    width: 100%;
+    line-height: 1.5;
+    color: #181818;
+    background-color: #fff;
+    border: 1px solid #7f7f7f;
+    border-radius: 4px;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    margin-top: auto;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M9 9.99998L0 0.585834L0.76673 -1.52588e-05L9 8.61197L17.2333 -1.52588e-05L18 0.585834L9 9.99998Z' fill='black' /%3E%3C/svg%3E");
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 32px;
+}
+.pci-body .dropdown-form-group select:hover {
+    border: 1px solid #181818;
+}
+.pci-body .dropdown-form-group select:focus {
+    outline: 0;
+    border-color: #181818;
+    border-width: 2px;
+    padding-left: calc(16px - 1px);
+}
+.pci-body .dropdown-form-group select.invalid-input {
+    border: 1px solid #cd1a2b;
+    background-color: #fdf2f4;
+}
+.pci-body .dropdown-form-group select.invalid-input:focus {
+    border: 2px solid #cd1a2b;
+}
+.pci-body .dropdown-form-group .field-error {
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    margin: 8px 0 0;
+    color: #cd1a2b;
+}
+.pci-body .dropdown-form-group .field-error + .field-error {
+    margin-top: -2px;
+}
+.pci-body .dropdown-form-group .field-error {
+    display: none;
+}
+@media (min-width: 447px) {
+    .pci-body .row {
+        flex-direction: row;
+    }
+    .pci-body .row > div {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .pci-body .row > div:first-child {
+        margin-left: 0;
+    }
+    .pci-body .row > div:last-child {
+        margin-right: 0;
+    }
+}
+.pci-body .contain-tooltip:after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.5%2012C1.5%206.20114%206.20114%201.5%2012%201.5C17.7989%201.5%2022.5%206.20114%2022.5%2012C22.5%2017.7989%2017.7989%2022.5%2012%2022.5C6.20114%2022.5%201.5%2017.7989%201.5%2012Z%22%20stroke%3D%22%237F7F7F%22%2F%3E%0A%3Cpath%20d%3D%22M11.014%2016.2253C11.2149%2016.0184%2011.4595%2015.915%2011.7459%2015.915C12.0323%2015.915%2012.2789%2016.0184%2012.4858%2016.2253C12.6926%2016.4321%2012.7961%2016.6787%2012.7961%2016.9651C12.7961%2017.2505%2012.6926%2017.4952%2012.4858%2017.6961C12.2789%2017.8979%2012.0323%2017.9994%2011.7459%2017.9994C11.4595%2017.9994%2011.2159%2017.8979%2011.014%2017.6961C10.8131%2017.4952%2010.7117%2017.2515%2010.7117%2016.9651C10.7117%2016.6787%2010.8131%2016.4321%2011.014%2016.2253Z%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Cpath%20d%3D%22M13.4962%206.67049C13.9307%206.85049%2014.2967%207.09016%2014.594%207.38651C14.8904%207.68385%2015.1161%208.02594%2015.2693%208.41378C15.4224%208.80063%2015.5%209.19642%2015.5%209.59918C15.5%2010.2356%2015.3459%2010.7796%2015.0386%2011.2301C14.7313%2011.6816%2014.3444%2012.0605%2013.877%2012.3678L13.1461%2012.861C12.9015%2013.0311%2012.7245%2013.2508%2012.6131%2013.5213C12.5017%2013.7918%2012.446%2014.0812%2012.446%2014.3885V14.5078C12.446%2014.5446%2012.451%2014.6053%2012.4619%2014.6908H11.0617C11.0508%2014.5943%2011.0458%2014.5048%2011.0458%2014.4193V14.1329C11.0458%2013.6029%2011.1473%2013.1365%2011.3481%2012.7327C11.55%2012.33%2011.8881%2011.969%2012.3665%2011.6507L13.0666%2011.1734C13.343%2010.9924%2013.5519%2010.7647%2013.6951%2010.4892C13.8383%2010.2138%2013.9099%209.92238%2013.9099%209.61409C13.9099%209.3804%2013.8701%209.15565%2013.7905%208.93786C13.711%208.72008%2013.5936%208.52715%2013.4405%208.3571C13.2863%208.18704%2013.0904%208.05279%2012.8518%207.95136C12.6131%207.85092%2012.3346%207.8002%2012.0164%207.8002C11.6664%207.8002%2011.366%207.85887%2011.1174%207.97522C10.8678%208.09158%2010.6639%208.24572%2010.5048%208.43665C10.3457%208.62759%2010.2264%208.84438%2010.1468%209.08902C10.0673%209.33266%2010.0275%209.58227%2010.0275%209.83685C10.0275%209.97508%2010.0384%2010.1183%2010.0593%2010.2665C10.0802%2010.4146%2010.107%2010.531%2010.1389%2010.6165L8.59547%2010.4256C8.53182%2010.2028%208.5%209.94823%208.5%209.66183C8.5%209.30084%208.56862%208.92792%208.70685%208.54008C8.84508%208.15323%209.0569%207.8002%209.3433%207.48197C9.62971%207.16375%209.99268%206.90419%2010.4332%206.70232C10.8728%206.50144%2011.4008%206.4%2012.0164%206.4C12.5673%206.4%2013.0606%206.4905%2013.4962%206.67049Z%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+    background-size: contain;
+    position: absolute;
+    right: 13px;
+    top: 16px;
+    display: inline-block;
+    margin-left: 4px;
+    width: 24px;
+    height: 24px;
+    vertical-align: text-top;
+}
+.pci-body .contain-tooltip:hover:after {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.5%2012C1.5%206.20114%206.20114%201.5%2012%201.5C17.7989%201.5%2022.5%206.20114%2022.5%2012C22.5%2017.7989%2017.7989%2022.5%2012%2022.5C6.20114%2022.5%201.5%2017.7989%201.5%2012Z%22%20stroke%3D%22%23181818%22%2F%3E%0A%3Cpath%20d%3D%22M11.014%2016.2253C11.2149%2016.0184%2011.4595%2015.915%2011.7459%2015.915C12.0323%2015.915%2012.2789%2016.0184%2012.4858%2016.2253C12.6926%2016.4321%2012.7961%2016.6787%2012.7961%2016.9651C12.7961%2017.2505%2012.6926%2017.4952%2012.4858%2017.6961C12.2789%2017.8979%2012.0323%2017.9994%2011.7459%2017.9994C11.4595%2017.9994%2011.2159%2017.8979%2011.014%2017.6961C10.8131%2017.4952%2010.7117%2017.2515%2010.7117%2016.9651C10.7117%2016.6787%2010.8131%2016.4321%2011.014%2016.2253Z%22%20fill%3D%22%23181818%22%2F%3E%0A%3Cpath%20d%3D%22M13.4962%206.67049C13.9307%206.85049%2014.2967%207.09016%2014.594%207.38651C14.8904%207.68385%2015.1161%208.02594%2015.2693%208.41378C15.4224%208.80063%2015.5%209.19642%2015.5%209.59918C15.5%2010.2356%2015.3459%2010.7796%2015.0386%2011.2301C14.7313%2011.6816%2014.3444%2012.0605%2013.877%2012.3678L13.1461%2012.861C12.9015%2013.0311%2012.7245%2013.2508%2012.6131%2013.5213C12.5017%2013.7918%2012.446%2014.0812%2012.446%2014.3885V14.5078C12.446%2014.5446%2012.451%2014.6053%2012.4619%2014.6908H11.0617C11.0508%2014.5943%2011.0458%2014.5048%2011.0458%2014.4193V14.1329C11.0458%2013.6029%2011.1473%2013.1365%2011.3481%2012.7327C11.55%2012.33%2011.8881%2011.969%2012.3665%2011.6507L13.0666%2011.1734C13.343%2010.9924%2013.5519%2010.7647%2013.6951%2010.4892C13.8383%2010.2138%2013.9099%209.92238%2013.9099%209.61409C13.9099%209.3804%2013.8701%209.15565%2013.7905%208.93786C13.711%208.72008%2013.5936%208.52715%2013.4405%208.3571C13.2863%208.18704%2013.0904%208.05279%2012.8518%207.95136C12.6131%207.85092%2012.3346%207.8002%2012.0164%207.8002C11.6664%207.8002%2011.366%207.85887%2011.1174%207.97522C10.8678%208.09158%2010.6639%208.24572%2010.5048%208.43665C10.3457%208.62759%2010.2264%208.84438%2010.1468%209.08902C10.0673%209.33266%2010.0275%209.58227%2010.0275%209.83685C10.0275%209.97508%2010.0384%2010.1183%2010.0593%2010.2665C10.0802%2010.4146%2010.107%2010.531%2010.1389%2010.6165L8.59547%2010.4256C8.53182%2010.2028%208.5%209.94823%208.5%209.66183C8.5%209.30084%208.56862%208.92792%208.70685%208.54008C8.84508%208.15323%209.0569%207.8002%209.3433%207.48197C9.62971%207.16375%209.99268%206.90419%2010.4332%206.70232C10.8728%206.50144%2011.4008%206.4%2012.0164%206.4C12.5673%206.4%2013.0606%206.4905%2013.4962%206.67049Z%22%20fill%3D%22%23181818%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.pci-body #cardnumber:placeholder-shown:not(:focus) ~ label {
+    margin-left: 0;
+    z-index: 1;
+}
+.pci-body #cardnumber {
+    padding-left: 60px;
+}
+.pci-body #cardnumber:focus {
+    padding-left: calc(60px - 1px);
+}
+.pci-body input:placeholder-shown:not(:focus) ~ label#trans-security_code {
+    width: calc(100% - (12px * 2) - (24px + 2px));
+}
+.pci-body #provider-icons {
+    pointer-events: none;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    z-index: 1;
+    width: 34px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2234%22%20height%3D%2224%22%20viewBox%3D%220%200%2034%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2233%22%20height%3D%2223%22%20rx%3D%222.5%22%20fill%3D%22white%22%20stroke%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%224%22%20y%3D%2218%22%20width%3D%2212%22%20height%3D%221%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3Crect%20x%3D%224%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%2211%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%2218%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%2225%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%224%22%20y%3D%228%22%20width%3D%226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pci-body #provider-icons .icon-provider {
+    width: 34px;
+    height: 24px;
+    display: block;
+    background-size: contain;
+    background: no-repeat center;
+    transform: scale(1);
+}
+.pci-body #provider-icons .icon-provider.disabled {
+    display: none;
+}
+.pci-body #provider-icons .visa {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2234%22%20height%3D%2224%22%20viewBox%3D%220%200%2034%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M31.0857%2024H2.91429C1.30171%2024%200%2022.7136%200%2021.12V2.88C0%201.2864%201.30171%200%202.91429%200H31.0857C32.6983%200%2034%201.2864%2034%202.88V21.12C34%2022.7136%2032.6983%2024%2031.0857%2024Z%22%20fill%3D%22%23F8F8F8%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M3%200C1.34315%200%200%201.34315%200%203V21C0%2022.6569%201.34315%2024%203%2024H31C32.6569%2024%2034%2022.6569%2034%2021V3C34%201.34315%2032.6569%200%2031%200H3ZM3%201C1.89543%201%201%201.89543%201%203V21C1%2022.1046%201.89543%2023%203%2023H31C32.1046%2023%2033%2022.1046%2033%2021V3C33%201.89543%2032.1046%201%2031%201H3Z%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3Cpath%20d%3D%22M14.7671%208.11751L13.0262%2015.8373H15.1266L16.8675%208.11751H14.7671ZM28.2969%208.11751H26.5087C26.1114%208.11751%2025.7613%208.3435%2025.6194%208.67797L22.4592%2015.8373H24.6638L25.099%2014.6802H27.7955L28.0509%2015.8373H30L28.2969%208.11751ZM25.714%2013.0983L26.8115%2010.2056L27.4454%2013.0983H25.714ZM11.6543%208.11751L9.46871%2013.3695L8.57933%208.90395C8.46579%208.39774%208.06841%208.10847%207.6048%208.10847H4.04731L4%208.33446C4.73799%208.48814%205.56114%208.7322%206.07205%208.98531C6.37482%209.15706%206.46943%209.29266%206.56405%209.67232L8.23872%2015.8463H10.4527L13.8683%208.12655H11.6543V8.11751ZM19.6303%2010.2689C19.6303%209.99774%2019.9141%209.6904%2020.5197%209.62712C20.8224%209.6%2021.655%209.56384%2022.5917%209.97966L22.9607%208.33446C22.4498%208.16271%2021.7969%208%2021.0022%208C18.9301%208%2017.4636%209.04859%2017.4447%2010.5582C17.4258%2011.6701%2018.4949%2012.2938%2019.2802%2012.6644C20.0939%2013.0441%2020.3777%2013.2881%2020.3683%2013.6226C20.3683%2014.1379%2019.7154%2014.3729%2019.1099%2014.3819C18.0597%2014.4%2017.4352%2014.1107%2016.9527%2013.8938L16.5742%2015.5842C17.0662%2015.8011%2017.9745%2015.9819%2018.9207%2016C21.1346%2016%2022.5728%2014.9605%2022.5917%2013.3605C22.5728%2011.2904%2019.6114%2011.1638%2019.6303%2010.2689Z%22%20fill%3D%22%230F2496%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.pci-body #provider-icons .mastercard {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2234%22%20height%3D%2224%22%20viewBox%3D%220%200%2034%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M31.0857%2024H2.91429C1.30171%2024%200%2022.7136%200%2021.12V2.88C0%201.2864%201.30171%200%202.91429%200H31.0857C32.6983%200%2034%201.2864%2034%202.88V21.12C34%2022.7136%2032.6983%2024%2031.0857%2024Z%22%20fill%3D%22%23F8F8F8%22%2F%3E%0A%3Cpath%20d%3D%22M26.4773%2012.0014C26.4773%2015.3147%2023.7941%2017.998%2020.4922%2017.998C17.1904%2017.998%2014.5073%2015.3148%2014.5073%2012.0014C14.5073%208.68796%2017.1907%206.00476%2020.4921%206.00476C23.7936%206.00476%2026.4773%208.68796%2026.4773%2012.0014Z%22%20fill%3D%22%23F79F1A%22%2F%3E%0A%3Cpath%20d%3D%22M19.0923%2012.0015C19.0923%2015.3148%2016.4089%2017.9981%2013.1073%2017.9981C9.80564%2017.9981%207.12225%2015.3149%207.12225%2012.0015C7.12225%208.68806%209.80545%206.00476%2013.1073%206.00476C16.4091%206.00476%2019.0923%208.68796%2019.0923%2012.0014V12.0015Z%22%20fill%3D%22%23EA001B%22%2F%3E%0A%3Cpath%20d%3D%22M16.7939%207.27637C15.3939%208.37297%2014.5072%2010.0764%2014.5072%2012.0015C14.5072%2013.9266%2015.4056%2015.6297%2016.7939%2016.7264C18.1939%2015.6297%2019.0806%2013.9264%2019.0806%2012.0013C19.0806%2010.0762%2018.1939%208.37297%2016.7939%207.27637Z%22%20fill%3D%22%23FF5F01%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M3%200C1.34314%200%200%201.34314%200%203V21C0%2022.6569%201.34314%2024%203%2024H31C32.6569%2024%2034%2022.6569%2034%2021V3C34%201.34314%2032.6569%200%2031%200H3ZM3%201C1.89545%201%201%201.89539%201%203V21C1%2022.1046%201.89545%2023%203%2023H31C32.1046%2023%2033%2022.1046%2033%2021V3C33%201.89539%2032.1046%201%2031%201H3Z%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.pci-body #provider-icons .amex {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2234%22%20height%3D%2224%22%20viewBox%3D%220%200%2034%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M30.2571%2024H3.74286C2.22514%2024%201%2022.7136%201%2021.12V2.88C1%201.2864%202.22514%200%203.74286%200H30.2571C31.7749%200%2033%201.2864%2033%202.88V21.12C33%2022.7136%2031.7749%2024%2030.2571%2024Z%22%20fill%3D%22%23016FD0%22%2F%3E%0A%3Cpath%20d%3D%22M7.18662%2018V12.9515H12.5187L13.0908%2013.699L13.6818%2012.9514H33.0359V17.6519C33.0359%2017.6519%2032.5297%2017.9949%2031.9443%2018H21.2276L20.5826%2017.2041V18H18.4691V16.6414C18.4691%2016.6414%2018.1804%2016.8312%2017.5562%2016.8312H16.8367V18H13.6366L13.0652%2017.2363L12.4853%2018H7.18662ZM0.960022%209.14639L2.16238%206.33606H4.24187L4.92421%207.9103V6.33606H7.50913L7.91542%207.47388L8.30899%206.33606H19.9127V6.90808C19.9127%206.90808%2020.5228%206.33606%2021.5253%206.33606L25.2902%206.34928L25.9608%207.90282V6.33606H28.124L28.7194%207.22855V6.33606H30.9024V11.3846H28.7193L28.1488%2010.4893V11.3846H24.9706L24.6509%2010.5887H23.7966L23.4821%2011.3846H21.3268C20.4642%2011.3846%2019.9128%2010.8243%2019.9128%2010.8243V11.3846H16.663L16.0181%2010.5887V11.3846H3.93384L3.61444%2010.5887H2.76268L2.44562%2011.3846H0.960022V9.14639Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M2.67655%206.95295L1.06372%2010.6998H2.11367L2.4113%209.94942H4.14135L4.43732%2010.6998H5.5106L3.89923%206.95295H2.67646H2.67655ZM3.27326%207.82483L3.80057%209.13605H2.7444L3.27316%207.82493L3.27326%207.82483ZM5.6216%2010.6991V6.95227L7.11361%206.95781L7.98161%209.37361L8.8287%206.95237H10.309V10.6991H9.37146V7.93826L8.3777%2010.6991H7.55558L6.55899%207.93826V10.6991H5.6215H5.6216ZM10.9504%2010.6991V6.95227H14.0095V7.79042H11.8977V8.43136H13.9603V9.22013H11.8977V9.88575H14.0095V10.6991H10.9504ZM14.5523%206.95295V10.6998H15.4898V9.36865H15.8844L17.0085%2010.6998H18.1541L16.9207%209.31937C17.4269%209.2766%2017.949%208.84251%2017.949%208.16853C17.949%207.38005%2017.3297%206.95295%2016.6385%206.95295H14.5523ZM15.4898%207.79101H16.5613C16.8184%207.79101%2017.0055%207.99192%2017.0055%208.18544C17.0055%208.43437%2016.7631%208.57988%2016.5752%208.57988H15.4898V7.79101ZM19.289%2010.6992H18.3318V6.95227H19.289V10.6991V10.6992ZM21.5586%2010.6992H21.3521C20.3524%2010.6992%2019.7454%209.91219%2019.7454%208.84115C19.7454%207.74367%2020.3456%206.95227%2021.608%206.95227H22.6442V7.8397H21.5701C21.0577%207.8397%2020.6953%208.23929%2020.6953%208.85038C20.6953%209.57598%2021.1097%209.8807%2021.7067%209.8807H21.9534L21.5587%2010.6991L21.5586%2010.6992ZM23.5987%206.95295L21.9858%2010.6998H23.0359L23.3334%209.94942H25.0635L25.3595%2010.6998H26.4326L24.8213%206.95295H23.5986H23.5987ZM24.1954%207.82483L24.7227%209.13605H23.6665L24.1953%207.82493L24.1954%207.82483ZM26.5422%2010.6991V6.95227H27.734L29.2559%209.30644V6.95227H30.1934V10.6991H29.04L27.4795%208.28342V10.6991H26.5422ZM7.89121%2017.2562V13.5093H10.9504V14.3474H8.83861V14.9883H10.901V15.7772H8.83861V16.4427H10.9504V17.2563L7.89121%2017.2562ZM22.881%2017.2562V13.5093H25.9402V14.3474H23.8283V14.9883H25.881V15.7772H23.8283V16.4427H25.9401V17.2563L22.881%2017.2562ZM11.0691%2017.2562L12.5585%2015.4058L11.0338%2013.5093H12.2148L13.1231%2014.6819L14.0343%2013.5093H15.1691L13.6643%2015.3829L15.1565%2017.2563H13.9755L13.0937%2016.1023L12.2334%2017.2563H11.0691L11.0691%2017.2562ZM15.2677%2013.5099V17.2568H16.2299V16.0736H17.2166C18.0516%2016.0736%2018.6845%2015.6309%2018.6845%2014.7701C18.6845%2014.0571%2018.1881%2013.5099%2017.3385%2013.5099H15.2677ZM16.2299%2014.3573H17.2691C17.5388%2014.3573%2017.7317%2014.5226%2017.7317%2014.7887C17.7317%2015.0388%2017.5398%2015.2201%2017.2661%2015.2201H16.2299V14.3573ZM19.0916%2013.5093V17.2562H20.0291V15.925H20.4238L21.5478%2017.2562H22.6935L21.4601%2015.8758C21.9662%2015.833%2022.4884%2015.3989%2022.4884%2014.7249C22.4884%2013.9364%2021.8691%2013.5093%2021.1778%2013.5093H19.0916ZM20.0291%2014.3474H21.1007C21.3578%2014.3474%2021.5448%2014.5483%2021.5448%2014.7418C21.5448%2014.9907%2021.3025%2015.1363%2021.1146%2015.1363H20.0291V14.3474ZM26.3743%2017.2562V16.4426H28.2505C28.5281%2016.4426%2028.6484%2016.2929%2028.6484%2016.1284C28.6484%2015.9709%2028.5285%2015.8116%2028.2505%2015.8116H27.4028C26.6658%2015.8116%2026.2553%2015.363%2026.2553%2014.6894C26.2553%2014.0887%2026.6312%2013.5093%2027.7263%2013.5093H29.5519L29.1572%2014.3524H27.5783C27.2765%2014.3524%2027.1836%2014.5106%2027.1836%2014.6617C27.1836%2014.8171%2027.2984%2014.9883%2027.5289%2014.9883H28.417C29.2386%2014.9883%2029.5951%2015.4539%2029.5951%2016.0637C29.5951%2016.7193%2029.1978%2017.2562%2028.3723%2017.2562H26.3744H26.3743ZM29.8152%2017.2562V16.4426H31.6913C31.9689%2016.4426%2032.0891%2016.2929%2032.0891%2016.1284C32.0891%2015.9709%2031.9693%2015.8116%2031.6913%2015.8116H30.8435C30.1066%2015.8116%2029.6961%2015.363%2029.6961%2014.6894C29.6961%2014.0887%2030.072%2013.5093%2031.1671%2013.5093H32.9927L32.598%2014.3524H31.019C30.7172%2014.3524%2030.6242%2014.5106%2030.6242%2014.6617C30.6242%2014.8171%2030.7389%2014.9883%2030.9696%2014.9883H31.8577C32.6792%2014.9883%2033.0358%2015.4539%2033.0358%2016.0637C33.0358%2016.7193%2032.6385%2017.2562%2031.813%2017.2562H29.8151H29.8152Z%22%20fill%3D%22%23016FD0%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M3%200C1.34315%200%200%201.34315%200%203V21C0%2022.6569%201.34315%2024%203%2024H31C32.6569%2024%2034%2022.6569%2034%2021V3C34%201.34315%2032.6569%200%2031%200H3ZM3%201C1.89543%201%201%201.89543%201%203V21C1%2022.1046%201.89543%2023%203%2023H31C32.1046%2023%2033%2022.1046%2033%2021V3C33%201.89543%2032.1046%201%2031%201H3Z%22%20fill%3D%22%23016FD0%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.pci-body #payment-form-submit {
+    position: absolute;
+    bottom: -1000px;
+}
+.pci-body {
+    width: 531px;
+    position: relative;
+    left: 50px;
 }

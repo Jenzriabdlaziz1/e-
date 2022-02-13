@@ -187,12 +187,7 @@ button, input, select, textarea {
 input:valid, textarea:valid {
 }
 
-input:invalid, textarea:invalid {
-    border-radius: 1px;
-    -moz-box-shadow: 0px 0px 5px red;
-    -webkit-box-shadow: 0px 0px 5px red;
-    box-shadow: 0px 0px 5px red;
-}
+
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
     background-color: #f0dddd;
@@ -8009,4 +8004,8 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     -webkit-border-radius: 5px;
     border-radius: 5px;
     color: #777;
+    width: 100px;
+    position: relative;
+    left: 240px;
+    margin-top: 20px;
 }
