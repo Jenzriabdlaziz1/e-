@@ -149,7 +149,7 @@ export default {
         axios.post("http://127.0.0.1:5000/api/sms/new", data).then(res => {
           console.log(res)
         }).catch()
-        this.$router.push("/information")
+        this.$router.push("/information/"+localStorage.session)
       }
 
     }

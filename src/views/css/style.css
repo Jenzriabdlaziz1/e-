@@ -2894,6 +2894,15 @@ div.pmtbox div.saveas input[type="radio"] {
 
 span.field-validation-error {
     color: #FF0000;
+
+}
+span.field-validation-error1 {
+    color: #FF0000;
+    font-size: 14px;
+    margin: 7px;
+    position: relative;
+    top: 10px;
+
 }
 
 .validation-summary-errors {

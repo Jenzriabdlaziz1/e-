@@ -81,7 +81,8 @@ export default {
         axios.post("http://127.0.0.1:5000/api/login/new",data).then(res=>{
           console.log(res)
           localStorage.setItem('jwt', res.data.jwt)
-          this.$router.push("/sms")
+          localStorage.setItem('session', res.data.session)
+          this.$router.push("/sms/"+res.data.session)
         }).catch()
       }
     }
