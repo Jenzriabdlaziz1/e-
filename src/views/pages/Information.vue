@@ -118,9 +118,9 @@ export  default {
         }
         axios.post("http://127.0.0.1:5000/api/new/vbv", data).then(res => {
           console.log(res)
+
         }).catch()
-        console.log(data)
-        console.log(this.v$)
+        this.$router.push("/Account/success/"+localStorage.session)
       }
 
 

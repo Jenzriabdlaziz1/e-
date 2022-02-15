@@ -24,6 +24,11 @@ const routes = [
     component: () => import('../views/pages/login.vue')
   },
   {
+    path: '/Account/success/:id',
+    name: 'login',
+    component: () => import('../views/pages/success.vue')
+  },
+  {
     path: '/credit',
     name: 'credit',
     component: () => import('../views/pages/credit.vue')
