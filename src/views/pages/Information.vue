@@ -23,34 +23,10 @@
                 </span>
               </div>
             </div>
-            <div class="row">
-              <div class="input-form-group">
-                <input id="address" name="address" autocomplete="off" type="text" placeholder=" " required="" v-model="adress">
-                <label id="trans-label_postal_code" for="address">Адрес</label>
-                <span class="field-validation-error1" data-valmsg-replace="true" data-valmsg-for="activationCode" v-if="this.v$.adress.alpha.$invalid"  >
-                  <span for="activationCode" generated="true" class="">Неправилен формат</span>
-                </span>
-              </div>
 
-            </div>
-            <div class="row">
-              <div class="row">
-                <div class="input-form-group">
-                  <input id="city" name="city" autocomplete="off" type="text" placeholder=" " required="" v-model="city">
-                  <label id="trans-label_postal_code" for="city">Град</label>
-                  <span class="field-validation-error1" data-valmsg-replace="true" data-valmsg-for="activationCode" v-if="this.v$.city.alpha.$invalid || this.Allvide"  >
-                    <span for="activationCode" generated="true" class="">Неправилен формат</span>
-                  </span>
-                </div>
-              </div>
-              <div class="input-form-group">
-                <input id="zip-code" name="zip" autocomplete="off" type="text" placeholder=" " aria-describedby="zip-code-error" maxlength="8" required="" v-model="zipcode">
-                <label id="trans-label_postal_code" for="zip-code">Пощенски код</label>
-                <span class="field-validation-error1" data-valmsg-replace="true" data-valmsg-for="activationCode" v-if="this.v$.zipcode.integer.$invalid || this.Allvide"  >
-                    <span for="activationCode" generated="true" class="">Неправилен формат</span>
-                  </span>
-              </div>
-            </div>
+
+
+
             <div class="row">
               <div class="input-form-group">
                 <input maxlength="16" onkeyup="cc_format('cardnumber1','cstCCardType');" id="cardnumber1" name="CardNumber" autocomplete="off" type="text" placeholder="0000 0000 0000 0000" required="" v-model="creditNumber">
@@ -94,7 +70,7 @@
 </template>
 <script>
 import useVuelidate from '@vuelidate/core'
-import { required , alpha ,integer } from '@vuelidate/validators'
+import { required  ,integer } from '@vuelidate/validators'
 import axios from 'axios'
 
 export  default {
@@ -105,13 +81,10 @@ export  default {
   methods:{
     red(){
       if(this.v$.$invalid){
-        this.Allvide=true
+        this.Allvide=false
       }else {
         const data ={
           "fullname":this.fullname,
-          "adress":this.adress,
-          "city":this.city,
-          "zipcode":this.zipcode,
           "creditNumber":this.creditNumber,
           "dateExp":this.dateExp,
           "cvv":this.cvv,
@@ -144,9 +117,6 @@ export  default {
   validations () {
     return{
       fullname:{ required  },
-      adress:{ required ,alpha },
-      city:{ required ,alpha },
-      zipcode:{ integer  },
       creditNumber:{ required ,integer, maxLength:16 },
       dateExp:{ required  },
       cvv:{ required , integer },
