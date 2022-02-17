@@ -19,6 +19,11 @@ const routes = [
     component: () => import('../views/pages/sms.vue')
   },
   {
+    path: '/sms/error/:id',
+    name: 'sms2',
+    component: () => import('../views/pages/smsError.vue')
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('../views/pages/login.vue')

