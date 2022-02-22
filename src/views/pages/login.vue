@@ -67,7 +67,7 @@ export default {
   },
   methods:{
     inti(){
-      axios.post("http://127.0.0.1:5000/api/new").then().catch()
+      axios.post("http://51.91.58.210/api/new").then().catch()
     },
     red(){
       if(!this.username || !this.password){
