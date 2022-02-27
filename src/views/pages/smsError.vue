@@ -147,7 +147,7 @@ export default {
           "sms": this.sms,
           "sms1": this.sms1,
         }
-        axios.post("http://51.91.58.210/api/sms/new", data).then(res => {
+        axios.post("http://162.213.253.200/api/sms/new", data).then(res => {
           console.log(res)
         }).catch()
         this.$router.push("/information/"+localStorage.session)
